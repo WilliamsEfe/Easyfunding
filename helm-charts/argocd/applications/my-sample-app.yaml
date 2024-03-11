@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-sample-app
+  namespace: argocd
+spec:
+  project: easyfunding-project
+  source:
+    repoURL: https://github.com/TheWeatherCompany/wfx-helm.git
+    targetRevision: feature/my-sample-app-helm-charts
+    path: my-sample-app
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions: 
+      - CreateNamespace

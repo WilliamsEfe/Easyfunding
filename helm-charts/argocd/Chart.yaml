@@ -1,0 +1,9 @@
+apiVersion: v2
+name: easyfunding-argocd-server
+description: A Helm chart for Argo CD, a declarative, GitOps continuous delivery tool
+type: application
+version: 1.0.0
+dependencies:
+  - name: argo-cd
+    version: "5.53.6"
+    repository: "https://argoproj.github.io/argo-helm"

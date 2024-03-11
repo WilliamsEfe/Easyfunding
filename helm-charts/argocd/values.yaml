@@ -1,0 +1,16 @@
+argo-cd:
+  fullnameOverride: easyfunding-argocd-server
+  server:
+    name: server
+    ingress:
+      enabled: true
+      ingressClassName: "alb"
+      annotations:
+        kubernetes.io/ingress.class: "alb"
+        alb.ingress.kubernetes.io/scheme: internet-facing
+        alb.ingress.kubernetes.io/target-type: ip
+        alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+        alb.ingress.kubernetes.io/ip-address-type: ipv4
+        alb.ingress.kubernetes.io/load-balancer-name: "easyfunding-argocd-lb"
+        alb.ingress.kubernetes.io/backend-protocol: HTTP
+        alb.ingress.kubernetes.io/healthcheck-protocol: HTTP
