@@ -1,0 +1,12 @@
+terraform/EC2KeyPair.pem
+**/.terraform
+**/terraform.tfstate*
+**/*.tfstate
+**/*.plan
+**/*sensitive*
+**/output
+**/.idea
+**/*.swp
+**/*.swo
+**/.DS_Store
+**/.envrc
