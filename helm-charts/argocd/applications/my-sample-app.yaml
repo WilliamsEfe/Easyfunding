@@ -6,9 +6,9 @@ metadata:
 spec:
   project: easyfunding-project
   source:
-    repoURL: https://github.com/TheWeatherCompany/wfx-helm.git
-    targetRevision: feature/my-sample-app-helm-charts
-    path: my-sample-app
+    repoURL: https://github.com/WilliamsEfe/easyfundraising.git
+    targetRevision: feature/helm
+    path: helm-charts/my-sample-app
     helm:
       valueFiles:
         - values.yaml
